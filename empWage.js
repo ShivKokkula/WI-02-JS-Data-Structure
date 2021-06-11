@@ -44,9 +44,22 @@ function sum(dailyWage) {
 
 empDailyWageArr.forEach(sum);
 
+//UC-7- Calc total Wage using Array forEach traversal or reduce mthod
+
 console.log("UC7A - Total Days: " + (--totalWorkingDays) + " Total Hrs: " + totalEmpHrs + " Emp Wage: " + totEmpWage);
 
 function totalWages(totalWage,dailyWage) {
     return totalWage + dailyWage;
 }
 console.log("UC7A - Emp Wage with reduce: " + empDailyWageArr.reduce(totalWages,0));
+
+//UC 7B - Show day along with the Daily Wage using Array map helper function
+
+let dailycntr = 0;
+function mapDayWithWage(dailywage) {
+    dailycntr++;
+    return dailycntr + " = " + dailywage;
+}
+let mapDayWithWageArr = empDailyWageArr.map(mapDayWithWage);
+console.log("UC7B - Daily Wage Map");
+console.log(mapDayWithWageArr);
